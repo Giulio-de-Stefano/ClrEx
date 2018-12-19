@@ -4,12 +4,12 @@ import cucumber.World;
 import cucumber.api.java8.En;
 import org.openqa.selenium.Cookie;
 
+import static cucumber.World.driver;
 import static org.testng.Assert.*;
 
 public class Cookies implements En {
 
     public Cookies(World world) {
-
         Then("^the cookies alert panel is displayed", () -> {
             assertTrue(world.homePage.cookieAlertPanel.isDisplayed());
         });
@@ -26,7 +26,7 @@ public class Cookies implements En {
             String expCookieName = "CS_ACCEPT_COOKIES";
             String expCookieValue = "true";
 
-            Cookie alertDismissedCookie = world.driver.manage().getCookieNamed(expCookieName);
+            Cookie alertDismissedCookie = driver.manage().getCookieNamed(expCookieName);
             assertNotNull(alertDismissedCookie);
             assertEquals(alertDismissedCookie.getValue(), expCookieValue);
         });
