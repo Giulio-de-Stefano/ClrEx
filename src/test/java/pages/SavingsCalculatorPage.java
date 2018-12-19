@@ -3,7 +3,6 @@ package pages;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
 public class SavingsCalculatorPage extends PageAB {
@@ -23,6 +22,27 @@ public class SavingsCalculatorPage extends PageAB {
     public int commonScoreMinValue = 0;
     public int commonScoreMaxValue = 700;
 
+    @FindBy(className = "js-current-average-rate")
+    public WebElement currentAvgRate;
+
+    @FindBy(className = "js-current-annual-cost")
+    public WebElement currentAnnualCost;
+
+    @FindBy(className = "js-current-cc-available")
+    public WebElement currentCCAvailable;
+
+    @FindBy(className = "js-goal-average-rate")
+    public WebElement goalAvgRate;
+
+    @FindBy(className = "js-goal-annual-cost")
+    public WebElement goalAnnualCost;
+
+    @FindBy(className = "js-goal-cc-available")
+    public WebElement goalCCAvailable;
+
+    @FindBy(className = "js-total-saving-value")
+    public WebElement totalSavingValue;
+
     @Override
     public String getUrl() {
         return super.getUrl() + "/savings-calculator";
@@ -30,12 +50,10 @@ public class SavingsCalculatorPage extends PageAB {
 
     public void updateCurrentScoreSliderTo(int toValue) {
         moveSlider(currentScoreSlider, currentScoreStartValue, toValue);
-
     }
 
     public void updateGoalScoreSliderTo(int toValue) {
         moveSlider(goalScoreSlider, goalScoreStartValue, toValue);
-
     }
 
     private void validateSliderInput(int value, int minValue, int maxValue) {
