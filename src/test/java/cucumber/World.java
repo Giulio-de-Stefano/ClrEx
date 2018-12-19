@@ -7,16 +7,17 @@ import pages.HomePage;
 import pages.SavingsCalculatorPage;
 
 public class World {
-    public static WebDriver driver;
+    public WebDriver driver;
     public HomePage homePage;
     public SavingsCalculatorPage savingsCalculatorPage;
 
     public World() {
+        initChromeDriver();
         homePage = PageFactory.initElements(driver, HomePage.class);
         savingsCalculatorPage = PageFactory.initElements(driver, SavingsCalculatorPage.class);
     }
 
-    static void initChromeDriver() {
+    public void initChromeDriver() {
         System.setProperty("webdriver.chrome.driver", "/home/gg/chromedriver");
         driver = new ChromeDriver();
     }
