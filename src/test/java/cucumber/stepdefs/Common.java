@@ -10,6 +10,10 @@ public class Common implements En {
         When("^I navigate to the home page$", () -> {
             world.driver.navigate().to(world.homePage.getUrl());
         });
+
+        When("^I am on the savings calculator page$", () -> {
+            world.driver.navigate().to(world.savingsCalculatorPage.getUrl());
+        });
     }
 
 }

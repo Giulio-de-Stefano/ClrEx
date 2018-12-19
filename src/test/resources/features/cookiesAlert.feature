@@ -1,4 +1,4 @@
-Feature: Cookies alert behaviour
+Feature: Cookies alert display and dismissal
 
   Background:
     When I navigate to the home page
