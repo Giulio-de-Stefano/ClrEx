@@ -16,7 +16,7 @@ public class World {
         savingsCalculatorPage = PageFactory.initElements(driver, SavingsCalculatorPage.class);
     }
 
-    public static void initChromeDriver() {
+    static void initChromeDriver() {
         System.setProperty("webdriver.chrome.driver", "/home/gg/chromedriver");
         driver = new ChromeDriver();
     }

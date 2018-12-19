@@ -2,7 +2,6 @@ package cucumber.stepdefs;
 
 import cucumber.World;
 import cucumber.api.java8.En;
-import org.testng.Assert;
 
 import static org.testng.Assert.assertEquals;
 

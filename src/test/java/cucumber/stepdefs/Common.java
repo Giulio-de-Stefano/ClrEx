@@ -3,7 +3,7 @@ package cucumber.stepdefs;
 import cucumber.World;
 import cucumber.api.java8.En;
 
-import static cucumber.World.*;
+import static cucumber.World.driver;
 
 public class Common implements En {
 
