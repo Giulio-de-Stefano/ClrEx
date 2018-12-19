@@ -15,3 +15,7 @@ Feature: Cookies alert behaviour
     And I click on the cookie dismissal button
     When I navigate to the home page
     Then the cookies alert panel is not displayed
+
+  Scenario: dismissing the cookie alert adds a cookie to the browser
+    And I click on the cookie dismissal button
+    Then the browser contains the cookie alert dismissal cookie
