@@ -12,4 +12,7 @@ public class HomePage extends PageAB {
 
     @FindBy(className = "cs-cookie")
     public WebElement cookieAlertPanel;
+
+    @FindBy(className = "accept-cookies")
+    public WebElement cookieAlertAcceptCookiesBtn;
 }

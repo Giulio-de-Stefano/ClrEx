@@ -18,6 +18,9 @@ public class Cookies implements En {
             assertFalse(world.homePage.cookieAlertPanel.isDisplayed());
         });
 
+        When("^I click on the cookie dismissal button$", () -> {
+            world.homePage.cookieAlertAcceptCookiesBtn.click();
+        });
 
     }
 
